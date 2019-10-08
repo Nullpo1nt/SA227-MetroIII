@@ -1,0 +1,6 @@
+# Google C/C++ Coding Standard
+BasedOnStyle: Google
+ColumnLimit: 120
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never

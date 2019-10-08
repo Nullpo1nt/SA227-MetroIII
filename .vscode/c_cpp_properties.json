@@ -1,0 +1,51 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/systems/**",
+                "${workspaceFolder}/SDK/CHeaders/**"
+            ],
+            "defines": [
+                "XPLM200=1",
+                "XPLM210=1",
+                "XPLM300=1",
+                "XPLM301=1",
+                "APL=0",
+                "IBM=0",
+                "LIN=1"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compilerArgs": [
+                "-fPIC",
+                "-fvisibility=hidden"
+            ]
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/systems/**",
+                "${workspaceFolder}/SDK/CHeaders/**"
+            ],
+            "defines": [
+                "XPLM200=1",
+                "XPLM210=1",
+                "XPLM300=1",
+                "XPLM301=1",
+                "LIN=0",
+                "IBM=0",
+                "APL=1"
+            ],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
