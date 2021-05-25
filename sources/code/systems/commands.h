@@ -5,6 +5,4 @@
 
 #define UNREGISTER_CMD(cmdRef, callback) XPLMUnregisterCommandHandler(cmdRef, callback, 0, 0)
 
-// nws.h - Nose Wheel Steering Commands
-
-#endif
+#endif  // _COMMANDS_H_

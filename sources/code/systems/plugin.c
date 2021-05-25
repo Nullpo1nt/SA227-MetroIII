@@ -1,7 +1,8 @@
 #include <XPLMPlugin.h>
-#include "nws.h"
-
 #include <string.h>
+
+#include "datarefs.h"
+#include "nws.h"
 
 #if IBM
 #include <windows.h>
@@ -26,10 +27,10 @@ PLUGIN_API int XPluginStart(char *outName, char *outSig, char *outDesc) {
     strcpy(outSig, "sw4.pluginP");
     strcpy(outDesc, "SW4 Aircraft Plugin");
 
-    datarefs::dataRefEditor = XPLMFindPluginBySignature("xplanesdk.examples.DataRefEditor");
+    dataRefEditor = XPLMFindPluginBySignature("xplanesdk.examples.DataRefEditor");
 
-    nws::init();
-    nws::registerCallbacks();
+    nws_init();
+    nws_registerCallbacks();
 
     return 1;
 }
@@ -40,4 +41,4 @@ PLUGIN_API void XPluginReceiveMessage(XPLMPluginID inFrom, int inMsg, void *inPa
 
 PLUGIN_API void XPluginDisable(void) {}
 
-PLUGIN_API void XPluginStop(void) { nws::unregisterCallbacks(); }
+PLUGIN_API void XPluginStop(void) { nws_unregisterCallbacks(); }

@@ -3,8 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/systems/**",
-                "${workspaceFolder}/SDK/CHeaders/**"
+                "${workspaceFolder}/sources/code/systems/**",
+                "${XPLANE_SDK}/CHeaders/**"
             ],
             "defines": [
                 "XPLM200=1",
@@ -21,13 +21,14 @@
             "compilerArgs": [
                 "-fPIC",
                 "-fvisibility=hidden"
-            ]
+            ],
+            "configurationProvider": "vector-of-bool.cmake-tools"
         },
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/systems/**",
-                "${workspaceFolder}/SDK/CHeaders/**"
+                "${workspaceFolder}/sources/code/systems/**",
+                "${XPLANE_SDK}/CHeaders/**"
             ],
             "defines": [
                 "XPLM200=1",
@@ -38,13 +39,11 @@
                 "IBM=0",
                 "APL=1"
             ],
-            "macFrameworkPath": [
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
-            ],
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

@@ -19,7 +19,6 @@
  * - Landing Gear Down Position
  * - Rudder Pedal Deflection
  *
- *
  * Normal - Max 10" Left/Right
  * Variable Authority - 63-deg left/right
  *
@@ -57,26 +56,9 @@
 #ifndef _NWS_H_
 #define _NWS_H_
 
-#include <XPLMDataAccess.h>
-#include <XPLMProcessing.h>
-#include <XPLMUtilities.h>
-
-#include "commands.h"
-#include "datarefs.h"
-
-#include <cstdlib>
-
-namespace nws {
-
-enum SwitchArm : int { ARM_OFF = 0, ARM_ARMED = 1, ARM_TEST = 2 };
-enum SwitchPark : int { PARK_OFF = 0, PARK_ON = 1 };
-enum SwitchEngage : int { ENGAGE_OFF = 0, ENGAGE_ON = 1 };
-
-void init();
-void registerCallbacks();
-void unregisterCallbacks();
-float flightLoopCallback(float elapsedMe, float elapsedSim, int counter, void* refcon);
-
-}  // namespace nws
+void nws_init();
+void nws_registerCallbacks();
+void nws_unregisterCallbacks();
+float nws_flightLoopCallback(float elapsedMe, float elapsedSim, int counter, void* refcon);
 
 #endif /* _NWS_H_ */
