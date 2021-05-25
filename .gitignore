@@ -1,7 +1,13 @@
-assets/
 FairchildSA227/
-libs/
-output/
-reference/
-SDK/
-systems/build/
+
+# CMake files
+**/build
+
+# Blender files
+*.blend1
+
+# Log files
+*.log
+
+# OSX
+.DS_Store

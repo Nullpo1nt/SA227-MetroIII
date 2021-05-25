@@ -1,3 +1,8 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "time.h": "c",
+    "datarefs.h": "c"
+  },
+  "cmake.configureOnOpen": true
 }
